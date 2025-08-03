@@ -19,8 +19,4 @@ A responsive weather app to search current weather by city using OpenWeatherMap 
 
 ## 🙌 Author
 
-Yassine Boukraa
-
----
-
-**License:** MIT
+Yassine BoukraA
