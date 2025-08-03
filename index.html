@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/9819d42f7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Weather App</h1>
+      <form class="search-section">
+        <input
+          type="text"
+          name="City"
+          id="city"
+          placeholder="Enter a city..."
+        />
+        <button type="submit" id="Search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="weather">
+        <div class="city-name HideElements">
+          <h3 class="name">-</h3>
+        </div>
+        <div class="description-container HideElements">
+          <img src="cloud.png" alt="" class="icon" />
+          <p class="temp">
+            -
+            <!---->
+          </p>
+          <p class="description">-</p>
+        </div>
+        <div class="details HideElements">
+          <div class="humidity box">
+            <i class="fa-solid fa-water"></i>
+            <div class="h content">
+              <h3 class="detail-title">Humidity</h3>
+              <p>-</p>
+            </div>
+          </div>
+          <div class="wind box">
+            <i class="fa-solid fa-wind"></i>
+            <div class="w content">
+              <h3 class="detail-title">Wind Speed</h3>
+              <p>-</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sun-rs HideElements">
+          <p class="sun-title">Sunset & Sunrise</p>
+          <div class="sun-container">
+            <div class="Sunrise rs">
+              <i class="fa-regular fa-sun"></i>
+              <div>
+                <h3>Sunrise</h3>
+                <p class="time-r">-</p>
+              </div>
+            </div>
+            <div class="Sunset rs">
+              <i class="fa-regular fa-moon"></i>
+              <div>
+                <h3>Sunset</h3>
+                <p class="time-s">-</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="error-message" style="display: none;">
+          <img src="404.png" alt="" />
+          <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="var(--color-text-primary)" style="vertical-align: middle; margin-right: 8px" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8  8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+            </svg>
+            City not found. Please try again.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

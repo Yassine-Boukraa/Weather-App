@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+:root {
+  --color-background: rgb(230, 240, 250);
+  --color-primary: #1E90FF;
+  --color-secondary: #0B3D91;
+  --color-text-primary: #222222;
+  --color-text-secondary: #555555;
+  --color-accent: #FFB74D;
+  --color-error: #E94E77;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container{
+    background-color: var(--color-background);
+    width: 75%;
+    height: fit-content;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1.5rem;
+}
+.title{
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+form{
+    width: 100%;
+    position: relative;
+    margin-block: 0.7rem;
+}
+input{
+    width: 100%;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.2rem;
+    caret-color: var(--color-accent);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color-accent);
+    border-radius: 40px;
+    color: var(--color-text-primary);
+    overflow: scroll;
+}
+input::placeholder{
+    color: var(--color-text-secondary);
+}
+button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+button i{
+    font-size: 1.2rem;
+    color: var(--color-text-primary);
+}
+.weather{
+    margin-top: 2rem;
+    color: var(--color-text-primary);
+}
+.description-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.description-container img{
+    width: 45%;
+}
+.temp{
+    font-size: 3.5rem;
+    font-weight: 500;
+    position: relative;
+}
+.temp span{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+}
+.description{
+    font-size: 1.3rem;
+    letter-spacing: 0.4px;
+}
+.name{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.details, .sun-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details{
+    margin-block: 2rem;
+}
+.box{
+    width: 47%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+.box i{
+    font-size: 2rem;
+}
+.content h3, .rs div h3{
+    font-size: 1.5rem;
+}
+.content p, .rs div p{
+    font-size: 1.1rem;
+}
+.sun-rs{
+    width: 100%;
+    border: 2px solid rgba(85, 85, 85, 0.25);
+    border-radius: 1rem;
+    background: rgba(85, 85, 85, 0.1);
+    padding: 0.75rem;
+}
+
+.sun-rs .sun-title{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.sun-container .rs{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 0.75rem;
+}
+.rs i{
+    font-size: 2.5rem;
+}
+
+.error-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.7rem;
+}
+.error-message img{
+    width: 85%;
+    margin-bottom: 1rem;
+}
+.error-message h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.25rem;
+}
+
+
+
+@media (max-width : 768px) {
+    .container{
+        width: 85%;
+    }
+}
+@media (max-width : 600px) {
+    .title{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width : 550px) {
+    .details{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .error-message h2{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width : 450px) {
+    .sun-container{
+        flex-direction: column;
+    }
+    .container{
+        width: 95%;
+    }
+    input{
+        font-size: 1rem;
+    }
+}
+@media (max-width : 375px) {
+    .container{
+        width: 95vw;
+    }
+    .title{
+        font-size: 2rem;
+    }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-error {
+  animation: slideDown 0.5s ease-out forwards;
+}
